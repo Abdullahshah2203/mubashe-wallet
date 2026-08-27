@@ -21,7 +21,7 @@ export class Navbar {
 
   orderOnWhatsApp(): void {
 
-    const phoneNumber = '923001234567';
+    const phoneNumber = '923170804572';
 
     const message =
       'Hello MUBASHÉ Wallet, I would like to place an order.';
