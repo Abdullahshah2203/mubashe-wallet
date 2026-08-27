@@ -1,0 +1,133 @@
+<nav
+  class="navbar fixed top-0 left-0 right-0 z-50"
+  [class.menu-active]="isMenuOpen"
+>
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a
+      routerLink="/"
+      class="brand"
+      (click)="closeMenu()"
+    >
+      <span class="brand-main">MUBASHÉ</span>
+      <span class="brand-sub">WALLET</span>
+    </a>
+
+
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
+
+      <a routerLink="/" class="nav-link">
+        <span>Home</span>
+      </a>
+
+      <a routerLink="/collection" class="nav-link">
+        <span>Collection</span>
+      </a>
+
+      <a routerLink="/about" class="nav-link">
+        <span>About</span>
+      </a>
+
+      <a routerLink="/contact" class="nav-link">
+        <span>Contact</span>
+      </a>
+
+    </div>
+
+
+    <!-- Desktop WhatsApp -->
+    <button
+      type="button"
+      class="whatsapp-btn"
+      (click)="orderOnWhatsApp()"
+    >
+      <span class="whatsapp-dot"></span>
+      Order on WhatsApp
+    </button>
+
+
+    <!-- Mobile Menu Button -->
+    <button
+      type="button"
+      class="menu-btn"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu"
+    >
+
+      <span
+        class="menu-line"
+        [class.rotate-top]="isMenuOpen"
+      ></span>
+
+      <span
+        class="menu-line"
+        [class.hide-middle]="isMenuOpen"
+      ></span>
+
+      <span
+        class="menu-line"
+        [class.rotate-bottom]="isMenuOpen"
+      ></span>
+
+    </button>
+
+  </div>
+
+
+  <!-- Mobile Navigation -->
+  <div
+    class="mobile-menu"
+    [class.mobile-menu-open]="isMenuOpen"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <a
+        routerLink="/"
+        class="mobile-link"
+        (click)="closeMenu()"
+      >
+        Home
+      </a>
+
+      <a
+        routerLink="/collection"
+        class="mobile-link"
+        (click)="closeMenu()"
+      >
+        Collection
+      </a>
+
+      <a
+        routerLink="/about"
+        class="mobile-link"
+        (click)="closeMenu()"
+      >
+        About
+      </a>
+
+      <a
+        routerLink="/contact"
+        class="mobile-link"
+        (click)="closeMenu()"
+      >
+        Contact
+      </a>
+
+      <button
+        type="button"
+        class="mobile-whatsapp-btn"
+        (click)="orderOnWhatsApp()"
+      >
+        <span class="whatsapp-dot"></span>
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+  </div>
+
+</nav>

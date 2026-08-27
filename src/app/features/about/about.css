@@ -1,0 +1,566 @@
+/* ========================================
+   PAGE
+======================================== */
+
+.about-page {
+  background: #f7f5f0;
+  color: #171717;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.about-hero {
+  min-height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  border-bottom: 1px solid
+    rgba(23, 23, 23, 0.1);
+}
+
+
+.about-hero-content {
+  max-width: 900px;
+
+  padding: 100px 0;
+}
+
+
+.section-label {
+  margin: 0 0 22px;
+
+  color: #8a6848;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+
+.about-hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    65px,
+    10vw,
+    130px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.055em;
+}
+
+
+.about-hero h1 span {
+  display: block;
+
+  color: #8a6848;
+
+  font-style: italic;
+}
+
+
+.hero-description {
+  max-width: 500px;
+
+  margin: 45px 0 0;
+
+  color: #77736d;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   STORY
+======================================== */
+
+.story-section {
+  padding: 140px 0;
+}
+
+
+.story-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.85fr;
+
+  gap: 120px;
+
+  align-items: center;
+}
+
+
+/* ========================================
+   STORY IMAGE
+======================================== */
+
+.story-image {
+  position: relative;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #e5dfd5;
+}
+
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.story-image:hover img {
+  transform: scale(1.04);
+}
+
+
+.image-tag {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 25px;
+
+  padding: 13px 18px;
+
+  background: #171717;
+
+  color: white;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   STORY CONTENT
+======================================== */
+
+.story-content {
+  max-width: 500px;
+}
+
+
+.story-content h2 {
+  margin: 0 0 30px;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    70px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.045em;
+}
+
+
+.story-content h2 em {
+  color: #8a6848;
+
+  font-style: italic;
+}
+
+
+.story-content > p:not(.section-label):not(.signature) {
+  margin: 0 0 18px;
+
+  color: #77736d;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.story-line {
+  width: 50px;
+
+  height: 1px;
+
+  margin-top: 35px;
+
+  background: #8a6848;
+}
+
+
+.signature {
+  margin-top: 18px;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  color: #8a6848;
+
+  font-size: 22px;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   VALUES
+======================================== */
+
+.values-section {
+  padding: 120px 0;
+
+  background: #ebe7df;
+}
+
+
+.values-header {
+  margin-bottom: 65px;
+}
+
+
+.values-header h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    45px,
+    6vw,
+    75px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.045em;
+}
+
+
+.values-header h2 span {
+  color: #8a6848;
+
+  font-style: italic;
+}
+
+
+.values-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  background:
+    rgba(23, 23, 23, 0.12);
+}
+
+
+.value-card {
+  min-height: 300px;
+
+  padding: 35px;
+
+  background: #ebe7df;
+
+  transition:
+    background 0.35s ease;
+}
+
+
+.value-card:hover {
+  background: #e4dfd6;
+}
+
+
+.value-number {
+  color: #99938b;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.value-card h3 {
+  margin: 65px 0 15px;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+}
+
+
+.value-card p {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: #77736d;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   PAKISTAN
+======================================== */
+
+.pakistan-section {
+  min-height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 100px 0;
+
+  background: #171717;
+
+  color: white;
+}
+
+
+.pakistan-content {
+  max-width: 850px;
+}
+
+
+.pakistan-content .section-label {
+  color: #b59572;
+}
+
+
+.pakistan-content h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    55px,
+    8vw,
+    105px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+
+.pakistan-content h2 span {
+  color: #b59572;
+
+  font-style: italic;
+}
+
+
+.pakistan-content > p:not(.section-label) {
+  max-width: 520px;
+
+  margin: 40px 0;
+
+  color: #aaa7a1;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.collection-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 16px 20px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.collection-button span {
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.collection-button:hover {
+  background: #8a6848;
+
+  border-color: #8a6848;
+}
+
+
+.collection-button:hover span {
+  transform:
+    translateX(5px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .story-grid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+
+  .story-content {
+    max-width: 600px;
+  }
+
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+
+  .about-hero {
+    min-height: auto;
+  }
+
+
+  .about-hero-content {
+    padding: 80px 0;
+  }
+
+
+  .about-hero h1 {
+    font-size: 65px;
+  }
+
+
+  .story-section {
+    padding: 80px 0;
+  }
+
+
+  .story-grid {
+    gap: 50px;
+  }
+
+
+  .values-section {
+    padding: 80px 0;
+  }
+
+
+  .value-card {
+    min-height: 240px;
+
+    padding: 25px;
+  }
+
+
+  .value-card h3 {
+    margin-top: 45px;
+  }
+
+
+  .pakistan-section {
+    min-height: auto;
+
+    padding: 90px 0;
+  }
+
+
+  .pakistan-content h2 {
+    font-size: 60px;
+  }
+
+}

@@ -1,0 +1,64 @@
+<section class="featured-section">
+
+  <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+
+
+    <!-- Section Heading -->
+    <div
+      class="section-heading"
+    >
+
+      <div>
+
+        <p class="section-label">
+          THE COLLECTION
+        </p>
+
+        <h2 class="section-title">
+          Made to be carried.
+        </h2>
+
+      </div>
+
+
+      <div class="section-description">
+
+        <p>
+          Discover our selection of premium leather wallets,
+          crafted for everyday life.
+        </p>
+
+        <a
+          routerLink="/collection"
+          class="collection-link"
+        >
+          View Collection
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Products -->
+    <div
+      class="mt-14 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4"
+    >
+
+      @for (
+        product of featuredProducts;
+        track product.id
+      ) {
+
+        <app-product-card
+          [product]="product"
+        />
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

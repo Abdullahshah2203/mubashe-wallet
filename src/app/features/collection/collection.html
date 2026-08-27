@@ -1,0 +1,122 @@
+<section class="collection-page">
+
+  <!-- =====================================
+       HEADER
+  ====================================== -->
+
+  <div class="collection-header">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <div class="header-content">
+
+        <div>
+
+          <p class="section-label">
+            MUBASHÉ / COLLECTION
+          </p>
+
+          <h1>
+            Made to be
+            <span>carried.</span>
+          </h1>
+
+        </div>
+
+
+        <p class="header-description">
+          Explore our collection of premium leather
+          wallets, designed for everyday life.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       FILTER
+  ====================================== -->
+
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <div class="filter-wrapper">
+
+      <div class="filter-list">
+
+        @for (
+          category of categories;
+          track category
+        ) {
+
+          <button
+            type="button"
+            class="filter-button"
+            [class.active]="selectedCategory === category"
+            (click)="selectCategory(category)"
+          >
+            {{ category }}
+          </button>
+
+        }
+
+      </div>
+
+
+      <div class="product-count">
+
+        {{ filteredProducts.length }}
+
+        {{ filteredProducts.length === 1
+          ? 'PRODUCT'
+          : 'PRODUCTS'
+        }}
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       PRODUCTS
+  ====================================== -->
+
+  <div class="mx-auto max-w-7xl px-6 pb-32 lg:px-8">
+
+    <div class="products-grid">
+
+      @for (
+        product of filteredProducts;
+        track product.id
+      ) {
+
+        <app-product-card
+          [product]="product"
+        />
+
+      }
+
+    </div>
+
+
+    <!-- Empty -->
+
+    @if (filteredProducts.length === 0) {
+
+      <div class="empty-state">
+
+        <p>
+          No products found in this category.
+        </p>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

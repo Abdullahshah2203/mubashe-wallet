@@ -1,0 +1,95 @@
+<section class="why-section">
+
+  <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+
+    <!-- Header -->
+
+    <div class="why-header">
+
+      <div>
+
+        <p class="section-label">
+          WHY MUBASHÉ
+        </p>
+
+        <h2 class="section-title">
+          Less ordinary.
+          <span>More personal.</span>
+        </h2>
+
+      </div>
+
+      <p class="section-intro">
+        We believe a wallet should be more than something
+        you carry. It should become part of your everyday story.
+      </p>
+
+    </div>
+
+
+    <!-- Features -->
+
+    <div class="features-grid">
+
+      @for (feature of features; track feature.number) {
+
+        <article class="feature-card">
+
+          <!-- Number -->
+
+          <div class="feature-number">
+            {{ feature.number }}
+          </div>
+
+
+          <!-- Line -->
+
+          <div class="feature-line"></div>
+
+
+          <!-- Content -->
+
+          <div class="feature-content">
+
+            <h3>
+              {{ feature.title }}
+            </h3>
+
+            <p>
+              {{ feature.description }}
+            </p>
+
+          </div>
+
+
+          <!-- Arrow -->
+
+          <div class="feature-arrow">
+            ↗
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- Bottom Statement -->
+
+    <div class="why-bottom">
+
+      <span class="bottom-line"></span>
+
+      <p>
+        Crafted with intention.
+        Carried with confidence.
+      </p>
+
+      <span class="bottom-line"></span>
+
+    </div>
+
+  </div>
+
+</section>

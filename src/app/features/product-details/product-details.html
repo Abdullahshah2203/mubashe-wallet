@@ -1,0 +1,234 @@
+@if (product) {
+
+  <main class="product-page">
+
+    <div class="product-container">
+
+      <!-- =====================================
+           PRODUCT IMAGE
+      ====================================== -->
+
+      <div class="product-image-section">
+
+        <div class="product-image-wrapper">
+
+          <img
+            [src]="product.image"
+            [alt]="product.name"
+          />
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================
+           PRODUCT INFORMATION
+      ====================================== -->
+
+      <div class="product-info">
+
+        <p class="product-category">
+          {{ product.category }}
+        </p>
+
+
+        <h1>
+          {{ product.name }}
+        </h1>
+
+
+        <p class="product-price">
+          PKR {{ product.price | number }}
+        </p>
+
+
+        <div class="divider"></div>
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="description">
+          {{ product.description }}
+        </p>
+
+
+        <!-- =================================
+             COLOR
+        ================================== -->
+
+        <div class="option-section">
+
+          <div class="option-header">
+
+            <span>
+              COLOR
+            </span>
+
+            <strong>
+              {{ selectedColor }}
+            </strong>
+
+          </div>
+
+
+          <div class="color-options">
+
+            @for (
+              color of product.colors;
+              track color
+            ) {
+
+              <button
+                type="button"
+                class="color-option"
+                [class.active]="
+                  selectedColor === color
+                "
+                (click)="selectColor(color)"
+              >
+
+                <span
+                  class="color-circle"
+                  [class.black]="
+                    color.toLowerCase() === 'black'
+                  "
+                  [class.brown]="
+                    color.toLowerCase() === 'brown'
+                  "
+                  [class.tan]="
+                    color.toLowerCase() === 'tan'
+                  "
+                  [class.dark-brown]="
+                    color.toLowerCase() === 'dark brown'
+                  "
+                  [class.cognac]="
+                    color.toLowerCase() === 'cognac'
+                  "
+                  [class.navy]="
+                    color.toLowerCase() === 'navy'
+                  "
+                  [class.green]="
+                    color.toLowerCase() === 'green'
+                  "
+                ></span>
+
+                {{ color }}
+
+              </button>
+
+            }
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================
+             QUANTITY
+        ================================== -->
+
+        <div class="option-section">
+
+          <div class="option-header">
+
+            <span>
+              QUANTITY
+            </span>
+
+          </div>
+
+
+          <div class="quantity-control">
+
+            <button
+              type="button"
+              (click)="decreaseQuantity()"
+            >
+              −
+            </button>
+
+            <span>
+              {{ quantity }}
+            </span>
+
+            <button
+              type="button"
+              (click)="increaseQuantity()"
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================
+             ORDER
+        ================================== -->
+
+        <button
+          type="button"
+          class="whatsapp-order"
+          (click)="orderOnWhatsApp()"
+        >
+
+          <span>
+            Order on WhatsApp
+          </span>
+
+          <span>
+            →
+          </span>
+
+        </button>
+
+
+        <!-- =================================
+             INFO
+        ================================== -->
+
+        <div class="product-notes">
+
+          <div>
+            <span>01</span>
+            Premium leather construction
+          </div>
+
+          <div>
+            <span>02</span>
+            Carefully crafted in Pakistan
+          </div>
+
+          <div>
+            <span>03</span>
+            Order directly through WhatsApp
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+}
+
+
+@else {
+
+  <div class="not-found">
+
+    <h2>
+      Product not found
+    </h2>
+
+    <p>
+      The wallet you're looking for doesn't exist.
+    </p>
+
+  </div>
+
+}

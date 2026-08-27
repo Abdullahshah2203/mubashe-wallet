@@ -1,0 +1,430 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  background: rgba(247, 245, 240, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.navbar:hover {
+  background: rgba(247, 245, 240, 0.97);
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.navbar-container {
+  width: min(1200px, calc(100% - 48px));
+  height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ================================
+   BRAND
+================================ */
+
+.brand {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  color: #171717;
+
+  line-height: 1;
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.brand-main {
+  font-family: Georgia, 'Times New Roman', serif;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+.brand-sub {
+  margin-top: 5px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 0.42em;
+
+  opacity: 0.6;
+}
+
+
+/* ================================
+   DESKTOP NAVIGATION
+================================ */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 38px;
+
+  margin-left: auto;
+  margin-right: 42px;
+}
+
+.nav-link {
+  position: relative;
+
+  color: #303030;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  padding: 8px 0;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #8a6848;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover {
+  color: #8a6848;
+
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.whatsapp-btn {
+  border: 1px solid #171717;
+
+  background: #171717;
+
+  color: #ffffff;
+
+  padding: 12px 19px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+}
+
+.whatsapp-btn:hover {
+  background: transparent;
+
+  color: #171717;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* WhatsApp Indicator */
+
+.whatsapp-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #7fa67f;
+
+  animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    box-shadow: 0 0 0 0 rgba(127, 166, 127, 0.4);
+  }
+
+  50% {
+    transform: scale(1.15);
+
+    box-shadow: 0 0 0 5px rgba(127, 166, 127, 0);
+  }
+}
+
+
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.menu-line {
+  width: 21px;
+  height: 1.5px;
+
+  background: #171717;
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+}
+
+.rotate-top {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.rotate-bottom {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.hide-middle {
+  opacity: 0;
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .desktop-nav,
+  .whatsapp-btn {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .navbar-container {
+    height: 72px;
+
+    width: min(100% - 32px, 1200px);
+  }
+
+  .mobile-menu {
+    display: block;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    border-top: 1px solid transparent;
+
+    transition:
+      max-height 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.35s ease,
+      border-color 0.35s ease;
+  }
+
+  .mobile-menu-open {
+    max-height: 500px;
+
+    opacity: 1;
+
+    border-top-color: rgba(23, 23, 23, 0.08);
+  }
+
+  .mobile-menu-inner {
+    padding: 15px 24px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+  }
+
+  .mobile-link {
+    color: #171717;
+
+    text-decoration: none;
+
+    padding: 15px 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid rgba(23, 23, 23, 0.07);
+
+    transform: translateY(-8px);
+
+    opacity: 0;
+
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease,
+      color 0.3s ease;
+  }
+
+  .mobile-menu-open .mobile-link {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+
+  .mobile-link:hover {
+    color: #8a6848;
+  }
+
+  .mobile-whatsapp-btn {
+    margin-top: 18px;
+
+    padding: 14px 18px;
+
+    border: 1px solid #171717;
+
+    background: #171717;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transform: translateY(-8px);
+
+    opacity: 0;
+
+    transition:
+      opacity 0.45s ease 0.15s,
+      transform 0.45s ease 0.15s,
+      background 0.3s ease;
+  }
+
+  .mobile-menu-open .mobile-whatsapp-btn {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+
+  .mobile-whatsapp-btn:hover {
+    background: #8a6848;
+    border-color: #8a6848;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    width: calc(100% - 24px);
+  }
+
+  .brand-main {
+    font-size: 21px;
+  }
+
+  .brand-sub {
+    font-size: 7px;
+  }
+}

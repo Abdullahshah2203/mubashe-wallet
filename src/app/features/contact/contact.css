@@ -1,0 +1,389 @@
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+  position: relative;
+
+  min-height: 85vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   DECORATIVE CIRCLE
+======================================== */
+
+.contact-section::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -250px;
+  right: -180px;
+
+  border: 1px solid
+    rgba(181, 149, 114, 0.18);
+
+  border-radius: 50%;
+
+  animation:
+    contactFloat 8s ease-in-out infinite;
+}
+
+
+.contact-section::after {
+  content: '';
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  bottom: -220px;
+  left: -150px;
+
+  border: 1px solid
+    rgba(181, 149, 114, 0.12);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.contact-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 120px 24px;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.contact-label {
+  margin: 0 0 30px;
+
+  color: #b59572;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.contact-container h1 {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    65px,
+    10vw,
+    130px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.055em;
+}
+
+
+.contact-container h1 span {
+  display: block;
+
+  color: #b59572;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.contact-description {
+  max-width: 470px;
+
+  margin: 45px 0 35px;
+
+  color: #aaa7a1;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   WHATSAPP BUTTON
+======================================== */
+
+.whatsapp-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  min-width: 230px;
+
+  padding: 18px 20px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease;
+}
+
+
+.button-arrow {
+  font-size: 18px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.whatsapp-button:hover {
+  border-color: #b59572;
+
+  background: #b59572;
+
+  color: #171717;
+}
+
+
+.whatsapp-button:hover
+.button-arrow {
+  transform:
+    translateX(6px);
+}
+
+
+/* ========================================
+   CONTACT INFO
+======================================== */
+
+.contact-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  max-width: 800px;
+
+  margin-top: 100px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.info-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 25px 30px 0 0;
+}
+
+
+.info-label {
+  color: #b59572;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+
+.info-value {
+  color: #8f8c87;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.brand-mark {
+  margin-top: 100px;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 24px;
+
+  letter-spacing: 0.18em;
+}
+
+
+.brand-tagline {
+  margin: 8px 0 0;
+
+  color: #77736d;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes contactFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(-25px, 20px);
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+  .contact-info {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .info-item {
+    padding:
+      20px 0;
+
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .contact-container {
+    padding: 90px 24px;
+  }
+
+
+  .contact-container h1 {
+    font-size: 65px;
+  }
+
+
+  .contact-description {
+    font-size: 13px;
+
+    margin-top: 35px;
+  }
+
+
+  .whatsapp-button {
+    width: 100%;
+
+    gap: 20px;
+  }
+
+
+  .contact-info {
+    margin-top: 70px;
+  }
+
+
+  .brand-mark {
+    margin-top: 70px;
+  }
+
+}

@@ -1,0 +1,358 @@
+.whatsapp-section {
+  background: #f7f5f0;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   MAIN BOX
+======================================== */
+
+.whatsapp-box {
+  position: relative;
+
+  min-height: 420px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.35fr;
+
+  align-items: center;
+
+  padding: 70px;
+
+  overflow: hidden;
+
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   ORB
+======================================== */
+
+.whatsapp-orb {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: -180px;
+  top: -160px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(169, 137, 104, 0.25);
+
+  animation:
+    orbFloat 7s ease-in-out infinite;
+}
+
+.whatsapp-orb::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 35px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(169, 137, 104, 0.18);
+}
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-15px, 15px);
+  }
+
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.whatsapp-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+}
+
+
+.section-label {
+  margin: 0 0 18px;
+
+  color: #a98968;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+
+.whatsapp-content h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    70px
+  );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+
+.whatsapp-content h2 span {
+  display: block;
+
+  color: #a98968;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.description {
+  max-width: 480px;
+
+  margin: 28px 0 0;
+
+  color: #929292;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.whatsapp-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 32px;
+
+  padding: 16px 20px;
+
+  background: #ffffff;
+
+  color: #171717;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    gap 0.35s ease;
+}
+
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+
+  background: #a98968;
+
+  color: #ffffff;
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   WHATSAPP ICON
+======================================== */
+
+.whatsapp-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+}
+
+
+.whatsapp-icon svg {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.button-arrow {
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.whatsapp-button:hover
+.button-arrow {
+  transform: translateX(3px);
+}
+
+
+/* ========================================
+   SIDE
+======================================== */
+
+.whatsapp-side {
+  position: relative;
+
+  z-index: 2;
+
+  padding-left: 40px;
+
+  border-left: 1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.side-number {
+  color: #a98968;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+}
+
+
+.whatsapp-side p {
+  margin: 15px 0 0;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .whatsapp-box {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 55px;
+  }
+
+
+  .whatsapp-side {
+    padding-left: 0;
+
+    padding-top: 25px;
+
+    border-left: none;
+
+    border-top: 1px solid
+      rgba(255, 255, 255, 0.12);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+
+  .whatsapp-box {
+    min-height: auto;
+
+    padding: 45px 28px;
+  }
+
+
+  .whatsapp-content h2 {
+    font-size: 46px;
+  }
+
+
+  .description {
+    font-size: 12px;
+  }
+
+
+  .whatsapp-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .whatsapp-orb {
+    width: 300px;
+    height: 300px;
+
+    right: -180px;
+    top: -100px;
+  }
+
+}

@@ -1,0 +1,144 @@
+<article class="product-card group">
+
+  <!-- =====================================
+       PRODUCT IMAGE
+  ====================================== -->
+
+  <a
+    [routerLink]="['/product', product.id]"
+    class="product-image-wrapper"
+  >
+
+    <div class="product-image-container">
+
+      <img
+        [src]="product.image"
+        [alt]="product.name"
+        class="product-image"
+      />
+
+
+      <!-- Hover Overlay -->
+
+      <div class="product-overlay">
+
+        <span class="view-product">
+          View Product
+        </span>
+
+        <span class="view-arrow">
+          →
+        </span>
+
+      </div>
+
+
+      <!-- Product Number -->
+
+      <span class="product-number">
+        {{ product.id < 10 ? '0' + product.id : product.id }}
+      </span>
+
+    </div>
+
+  </a>
+
+
+  <!-- =====================================
+       PRODUCT INFORMATION
+  ====================================== -->
+
+  <div class="product-information">
+
+    <div class="product-main-info">
+
+      <div>
+
+        <!-- Category -->
+
+        <p class="product-category">
+          {{ product.category }}
+        </p>
+
+
+        <!-- Product Name -->
+
+        <h3 class="product-name">
+
+          <a
+            [routerLink]="['/product', product.id]"
+          >
+            {{ product.name }}
+          </a>
+
+        </h3>
+
+      </div>
+
+
+      <!-- Price -->
+
+      <p class="product-price">
+        PKR {{ product.price | number }}
+      </p>
+
+    </div>
+
+
+    <!-- =================================
+         COLORS
+    ================================== -->
+
+    @if (product.colors.length > 0) {
+
+      <div class="product-colors">
+
+        <span class="colors-label">
+          COLORS
+        </span>
+
+
+        <div class="colors-list">
+
+          @for (
+            color of product.colors;
+            track color
+          ) {
+
+            <span
+              class="color-dot"
+              [ngClass]="getColorClass(color)"
+              [title]="color"
+            ></span>
+
+          }
+
+        </div>
+
+      </div>
+
+    }
+
+
+    <!-- =================================
+         VIEW DETAILS
+    ================================== -->
+
+    <a
+      [routerLink]="['/product', product.id]"
+      class="details-link"
+    >
+
+      <span>
+        View Details
+      </span>
+
+      <span>
+        →
+      </span>
+
+    </a>
+
+  </div>
+
+</article>
